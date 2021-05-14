@@ -1,0 +1,50 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --headline-font: 'Raleway', sans-serif;
+    --content-font: 'Open Sans', sans-serif;
+    --color-article1: #FB3B64;
+    --color-article2: #07ACE6;
+    --color-article3: #55DFB4;
+    --color-button-article1: #EB476E;
+    --color-background: #FFFFFF;
+    --color-middle-background: #F7F7F7;
+    --color-border: #E8E9ED;
+    --color-shadow: rgba(7, 172, 230, .16);
+    --color-header-shadow: rgba(0, 0, 0, 0.16);
+    --color-copyright: #A5A5A5;
+    --color-form-footer: #08A6E4;
+    --color-checkbox-text: #707070;
+    --color-checkbox-border: #95989A;
+    --color-pricing-head: #13253B;
+    --weight-headline: 400px;
+    --weight-buttons: 700px;
+    --weight-numbers: 800px;
+    --weight-prices: 300px;
+    --size-header-menu: 11px;
+    --size-footer-logo: 26px;
+    --size-header-logo: 32px;
+    --size-section2-numbers: 20px;
+    --size-limited-offer: 12px;
+    --size-pricing-list: 14px;
+    --size-numebrs-foot-side: 17px;
+    --size-numbers-foot-middle: 16px;
+    --size-section1-5-title: 49px;
+    --size-section2-3-4-title: 36px;
+    --size-section4-headline: 21px;
+    --size-section4-button: 13px;
+    --size-section4-prices-numbers: 46px;
+    --size-checkbox: 9px;
+    --border-radius-pricing-list: 18px;
+    --border-radius-pricing-button: 23px;
+    --border-radius-section3: 5px;
+    --border-radius-section1-button: 40px;
+    --border-radius-section5-button: 35px;
+    --border-radius-checkbox: 4px;
+    --border-radius-list-checkbox: 2px;
+}
+
