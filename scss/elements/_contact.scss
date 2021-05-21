@@ -1,0 +1,44 @@
+
+.contact {
+  max-height: 100%;
+  padding: 100px 200px;
+}
+
+  .contact__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact_column {
+    max-width: 50%;
+    flex-wrap: wrap;
+  }
+
+  .contact__title {
+    padding: 0;
+    margin: 0;
+    line-height: 3.6875rem;
+  }
+
+  .contact__text {
+    padding: 25px 0;
+  }
+
+  .contact__number {
+    font-family: $content-font;
+    padding-left: 20px;
+
+    img {
+      padding-right: 10px;
+    }
+  }
+
+  .contact__mail {
+    font-family: $content-font;
+
+    img {
+      padding-right: 10px;
+    }
+  }
+

@@ -1,0 +1,46 @@
+
+.header {
+  box-shadow: 0 3px 6px $color-header-shadow;
+  padding-left: 10px;
+
+}
+  .container {
+    max-width: 1352px;
+    margin: 0 auto;
+  }
+
+  .page_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .page-logo {
+    color: $color-header_form-footer;
+    font-size: $size-header-logo;
+    font-weight: $weight-prices_header;
+  }
+
+  .page-nav-list {
+    display: flex;
+  }
+
+  .page-nav__element {
+    padding: 26px 25px;
+
+    a {
+      font-family: $content-font;
+      color: $color-header_copyright;
+      font-size: $size-header-menu;
+      font-weight: $weight-headline;
+      text-transform: uppercase;
+      padding: 28px 18px 22px;
+      border-bottom: 4px solid transparent;
+    }
+
+    a:hover {
+      color: $color-base;
+      border-color: $color-header_form-footer;
+    }
+  }

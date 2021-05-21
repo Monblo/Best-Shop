@@ -1,0 +1,28 @@
+.footer {
+  box-shadow: 0 -5px 40px $color-header-shadow;
+  padding: 20px 10px;
+}
+
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .twitter {
+    padding-right: 25px;
+  }
+
+  .copyright {
+    padding-top: 10px;
+    color: $color-header_copyright;
+    font-family: $content-font;
+    font-weight: $weight-headline;
+    font-size: 11px;
+  }

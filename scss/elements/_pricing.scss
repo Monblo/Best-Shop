@@ -1,0 +1,138 @@
+@use "sass:list";
+
+.pricing {
+  margin: 100px auto;
+  max-height: 100%;
+}
+
+  h2 {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .pricing__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0 100px;
+  }
+
+  .pricing__box {
+    min-width: 300px;
+    max-height: 100%;
+    text-align: center;
+    border-radius: $border-radius-pricing-list;
+  }
+
+  .pricing_headline {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .pricing_title {
+    font-size: $size-section2-numbers;
+    font-weight: $weight-buttons;
+  }
+
+  .pro-title {
+    font-size: $size-section4-headline;
+  }
+
+  .pricing__text {
+    font-size: $size-limited-offer;
+    font-weight: $weight-headline;
+    margin-top: 15px;
+  }
+
+  .pricing_list {
+    font-size: $size-pricing-list;
+    font-family: $content-font;
+    font-weight: $weight-headline;
+    padding-bottom: 15px;
+  }
+
+  @mixin font($fontcolor) {
+    font-size: $size-section4-prices-numbers;
+    font-family: $content-font;
+    font-weight: $weight-prices_header;
+    color: $fontcolor;
+    margin-top: 20px;
+  }
+
+  @mixin button($color) {
+    &::after {
+      content: "Begin";
+      font-family: $content-font;
+      font-size: $size-section4-btn;
+      color: $color-background;
+      background: $color;
+      border-radius: $border-radius-pricing-button;
+      padding: 15px 55px;
+      position: relative;
+      bottom: -10px;
+      cursor: pointer;
+    }
+  }
+
+  .pricing__basic {
+    border: 1px solid list.nth($accent_color, 1);
+
+    .pricing__numbers {
+      @include font(list.nth($accent_color, 1));
+      padding-bottom: 25px;
+    }
+
+    @include button(list.nth($accent_color,1));
+  }
+
+  .pricing__pro {
+    border: 1px solid list.nth($accent_color, 2);
+    box-shadow: 5px 10px 27px $color-shadow;
+    min-width: 320px;
+    margin: 0 40px;
+
+    .pricing__numbers {
+      @include font(list.nth($accent_color, 2));
+    }
+
+    .pricing__element {
+      padding-bottom: 15px;
+    }
+
+    .pricing__box::after {
+      box-shadow: 5px 10px 27px $color-shadow;
+    }
+
+    @include button(list.nth($accent_color,2));
+  }
+
+  .pricing__premium {
+    border: 1px solid list.nth($accent_color, 3);
+
+    .pricing__numbers {
+      @include font(list.nth($accent_color, 3));
+    }
+
+    @include button(list.nth($accent_color,3));
+  }
+
+  .pricing__element {
+    margin-bottom: 20px;
+
+    &::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      background-image: url("/assets/Ckechmark-1.svg");
+      background-size: cover;
+      background-position: center;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  .pricing__element-not::before {
+    background-image: url("/assets/Close.svg");
+  }

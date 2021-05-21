@@ -1,0 +1,142 @@
+@use "sass:list";
+
+.benefits {
+  background: $color-middle-background;
+  padding: 100px 0;
+}
+
+  .benefits_container {
+    padding: 0 100px;
+  }
+
+  .benefits__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: $color-background;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-section3;
+    margin-bottom: 40px;
+  }
+
+  .benefits__article {
+    max-width: 440px;
+    margin: 70px 35px;
+
+    h2 {
+      text-align: left;
+    }
+  }
+
+  .benefits__text {
+    margin-top: 30px;
+    line-height: 1.375rem;
+  }
+
+  .benefits__photo {
+    position: relative;
+
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .benefits__section3 {
+    display: flex;
+  }
+
+  @mixin accent($color) {
+    &::after {
+      content: "";
+      max-width: 328px;
+      border: 4px solid $color;
+      display: block;
+      margin-top: 50px;
+    }
+  }
+
+  .article_mac {
+    @include accent(list.nth($accent_color,1));
+  }
+
+  .article_iphone {
+    @include accent(list.nth($accent_color,2));
+    margin: 70px 0;
+  }
+
+  .article_trumpet {
+    @include accent(list.nth($accent_color,3));
+    max-width: none;
+    margin: 70px 35px;
+  }
+
+  .benefits__section1 {
+
+    .benefits__photo {
+      margin-right: 120px;
+      margin-bottom: 40px;
+
+      &::before {
+        content: "";
+        width: 180px;
+        height: 180px;
+        background: $color-article1;
+        transform: rotate(45deg);
+        border-radius: 41px;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -40px;
+      }
+    }
+  }
+
+  .img-Mac {
+    max-width: 360px;
+    height: auto;
+  }
+
+  .benefits__section2 {
+    flex-direction: row-reverse;
+    padding: 0 20px 0 70px;
+
+    .benefits__photo::before {
+      content: "";
+      width: 320px;
+      height: 320px;
+      background: $color-article2;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -20px;
+    }
+  }
+
+  .imgiphone {
+    max-width: 420px;
+    height: auto;
+  }
+
+  .benefits__trumpet {
+    max-width: 620px;
+  }
+
+  .benefits__photo_trumpet {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-article3;
+    border: none;
+    border-radius: $border-radius-section3;
+    margin-left: 60px;
+  }
+
+  .imgtrumpet {
+    max-width: 290px;
+    height: auto;
+    margin-top: 55px;
+  }
+

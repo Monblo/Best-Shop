@@ -1,0 +1,71 @@
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__input {
+    border: none;
+    border-bottom: 1px solid $color-checkbox-border;
+    line-height: 2.625rem;
+  }
+
+  .form__field {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+
+    .form__label {
+      color: $color-header_form-footer;
+      font-family: $content-font;
+      font-size: $size-header-menu;
+      font-weight: $weight-buttons;
+      letter-spacing: 3px;
+    }
+  }
+
+  .checkbox__label {
+    display: flex;
+    font-family: $content-font;
+    font-size: $size-checkbox;
+    color: $color-checkbox-text;
+    font-weight: $weight-headline;
+    line-height: 17px;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      input:checked ~ .checkbox {
+        background-image: url("/assets/Checkmark.svg");
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+  .checkbox {
+    height: 24px;
+    flex-shrink: 0;
+    flex-basis: 24px;
+    border: 1px solid $color-checkbox-border;
+    border-radius: $border-radius-checkbox;
+    margin-right: 15px;
+    cursor: pointer;}
+
+  .form__button {
+      color: $color-background;
+      font-size: $size-section4-btn;
+      background-color: $color-header_form-footer;
+      border-radius: $border-radius-section5-button;
+      border: none;
+      padding: 15px 70px;
+      margin-top: 20px;
+      align-self: flex-end;
+    }
+
+

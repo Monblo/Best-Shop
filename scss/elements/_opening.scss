@@ -1,0 +1,48 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+  .banner__title {
+    color: $color-base;
+    font-weight: $weight-headline;
+    font-size: $size-section1-5-title;
+    margin: 130px 0 30px 0;
+  }
+
+  .base_text {
+    color: $color-base;
+    font-weight: $weight-headline;
+    font-size: $size-text-foot-btn;
+    font-family: $content-font;
+  }
+
+  .banner__text {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    font-family: $content-font;
+    color: $color-background;
+    font-weight: $weight-buttons;
+    box-shadow: 5px 10px 14px $color-shadow;
+    padding: 15px 50px;
+    display: inline-block;
+  }
+
+  .banner__btn {
+    font-size: $size-text-foot-btn;
+    background: $color-header_form-footer;
+    border-radius: $border-radius-section1-button;
+    padding: 20px 150px;
+  }
+
+  .banner__background {
+    background-image: url("/assets/Background.png");
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
