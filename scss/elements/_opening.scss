@@ -10,6 +10,10 @@
     font-weight: $weight-headline;
     font-size: $size-section1-5-title;
     margin: 130px 0 30px 0;
+
+    @include mobile{
+      font-size: 2.1875rem;
+    }
   }
 
   .base_text {
@@ -17,6 +21,10 @@
     font-weight: $weight-headline;
     font-size: $size-text-foot-btn;
     font-family: $content-font;
+
+    @include mobile{
+      padding: 0 40px;
+    }
   }
 
   .banner__text {
@@ -37,6 +45,10 @@
     background: $color-header_form-footer;
     border-radius: $border-radius-section1-button;
     padding: 20px 150px;
+
+    @include mobile{
+      padding: 20px 90px;
+    }
   }
 
   .banner__background {
@@ -45,4 +57,6 @@
     width: 100%;
     background-size: cover;
     background-position: center;
+
   }
+

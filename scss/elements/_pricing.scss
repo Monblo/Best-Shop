@@ -3,19 +3,33 @@
 .pricing {
   margin: 100px auto;
   max-height: 100%;
+
+  @include mobile{
+    margin: 50px auto;
+  }
 }
 
   h2 {
     text-align: center;
     padding-bottom: 50px;
+
+    @include mobile{
+      padding-bottom: 15px;
+    }
   }
 
   .pricing__container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 30px;
     padding: 0 100px;
+
+    @include mobile{
+      margin-top: 10px;
+      padding: 0;
+    }
   }
 
   .pricing__box {
@@ -23,12 +37,25 @@
     max-height: 100%;
     text-align: center;
     border-radius: $border-radius-pricing-list;
+
+    @include mobile{
+      max-width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+    }
   }
 
   .pricing_headline {
     margin-top: 30px;
     margin-bottom: 50px;
     text-align: center;
+
+    @include mobile{
+      margin: 0;
+    }
   }
 
   .pricing_title {
@@ -51,6 +78,12 @@
     font-family: $content-font;
     font-weight: $weight-headline;
     padding-bottom: 15px;
+
+    @include mobile{
+      padding: 0;
+      margin: 25px 0;
+      text-align: left;
+    }
   }
 
   @mixin font($fontcolor) {
@@ -73,6 +106,11 @@
       position: relative;
       bottom: -10px;
       cursor: pointer;
+
+      @include mobile{
+        display: inline-block;
+        left: 0;
+      }
     }
   }
 
@@ -84,7 +122,7 @@
       padding-bottom: 25px;
     }
 
-    @include button(list.nth($accent_color,1));
+    @include button(list.nth($accent_color, 1));
   }
 
   .pricing__pro {
@@ -93,19 +131,38 @@
     min-width: 320px;
     margin: 0 40px;
 
+    @include mobile{
+      max-width: 100%;
+    }
+
     .pricing__numbers {
       @include font(list.nth($accent_color, 2));
     }
 
+    .pricing_list {
+      @include mobile{
+        margin: 50px 0;
+      }
+    }
+
     .pricing__element {
       padding-bottom: 15px;
+
+      @include mobile{
+        padding: 0;
+      }
     }
 
     .pricing__box::after {
       box-shadow: 5px 10px 27px $color-shadow;
     }
 
-    @include button(list.nth($accent_color,2));
+    //@include button(list.nth($accent_color,2));
+
+    @include mobile{
+      margin: 50px 0;
+      max-width: 100%;
+    }
   }
 
   .pricing__premium {
@@ -115,7 +172,7 @@
       @include font(list.nth($accent_color, 3));
     }
 
-    @include button(list.nth($accent_color,3));
+    //@include button(list.nth($accent_color,3));
   }
 
   .pricing__element {

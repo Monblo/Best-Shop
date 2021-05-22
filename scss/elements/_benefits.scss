@@ -3,10 +3,19 @@
 .benefits {
   background: $color-middle-background;
   padding: 100px 0;
+
+  @include mobile{
+    padding: 50px 0;
+  }
 }
 
   .benefits_container {
     padding: 0 100px;
+
+    @include mobile{
+      padding: 0;
+      margin: 0 30px;
+    }
   }
 
   .benefits__box {
@@ -17,6 +26,11 @@
     border: 1px solid $color-border;
     border-radius: $border-radius-section3;
     margin-bottom: 40px;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 
   .benefits__article {
@@ -26,11 +40,27 @@
     h2 {
       text-align: left;
     }
+
+    @include mobile{
+      max-width: 100%;
+      margin: 0 auto;
+
+      h2 {
+        font-size: 1.875rem;
+        padding-bottom: 30px;
+      }
+
+    }
   }
 
   .benefits__text {
     margin-top: 30px;
     line-height: 1.375rem;
+
+    @include mobile{
+      margin-top: 15px;
+      padding: 0;
+    }
   }
 
   .benefits__photo {
@@ -42,10 +72,6 @@
     }
   }
 
-  .benefits__section3 {
-    display: flex;
-  }
-
   @mixin accent($color) {
     &::after {
       content: "";
@@ -53,22 +79,38 @@
       border: 4px solid $color;
       display: block;
       margin-top: 50px;
+
+      @include mobile{
+        display: none;
+      }
     }
   }
 
   .article_mac {
     @include accent(list.nth($accent_color,1));
+
+    @include mobile {
+      margin: 20px 25px;
+    }
   }
 
   .article_iphone {
     @include accent(list.nth($accent_color,2));
     margin: 70px 0;
+
+    @include mobile {
+      margin: 20px 25px;
+    }
   }
 
   .article_trumpet {
     @include accent(list.nth($accent_color,3));
     max-width: none;
     margin: 70px 35px;
+
+    @include mobile{
+      margin: 20px 25px;
+    }
   }
 
   .benefits__section1 {
@@ -89,12 +131,27 @@
         right: 0;
         top: -40px;
       }
+
+      @include mobile{
+        margin: 40px;
+
+        &::before{
+          width: 120px;
+          height: 120px;
+          border-radius: 40%;
+          top: -20px;
+        }
+      }
     }
   }
 
   .img-Mac {
     max-width: 360px;
     height: auto;
+
+    @include mobile{
+      max-width: 100%;
+    }
   }
 
   .benefits__section2 {
@@ -112,15 +169,51 @@
       left: 0;
       top: -20px;
     }
+
+    @include mobile{
+      flex-direction: column-reverse;
+      padding: 0;
+
+      .benefits__photo {
+        margin-top: 30px;
+      }
+
+      .benefits__photo::before{
+        width: 150px;
+        height: 150px;
+        top: -10px;
+        left: 40px;
+      }
+    }
   }
 
-  .imgiphone {
-    max-width: 420px;
-    height: auto;
+.imgiphone {
+  max-width: 420px;
+  height: auto;
+
+  @include mobile{
+    max-width: 100%;
+    padding: 0 40px;
   }
+}
+
+.benefits__section3 {
+  display: flex;
+
+  @include mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
   .benefits__trumpet {
     max-width: 620px;
+
+    @include mobile{
+      max-width: 100%;
+      margin: 0 auto;
+    }
   }
 
   .benefits__photo_trumpet {
@@ -132,11 +225,22 @@
     border: none;
     border-radius: $border-radius-section3;
     margin-left: 60px;
+
+    @include mobile{
+      flex-grow: 0;
+      margin: 0 auto;
+    }
   }
 
   .imgtrumpet {
     max-width: 290px;
     height: auto;
     margin-top: 55px;
+
+    @include mobile{
+      max-width: 100%;
+      margin-right: 50px;
+    }
   }
+
 
