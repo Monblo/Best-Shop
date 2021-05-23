@@ -2,6 +2,10 @@
   .form {
     display: flex;
     flex-direction: column;
+
+    @include tablet{
+      padding-top: 50px;
+    }
   }
 
   .form__input {

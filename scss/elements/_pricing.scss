@@ -4,7 +4,7 @@
   margin: 100px auto;
   max-height: 100%;
 
-  @include mobile{
+  @include tablet{
     margin: 50px auto;
   }
 }
@@ -13,7 +13,7 @@
     text-align: center;
     padding-bottom: 50px;
 
-    @include mobile{
+    @include tablet{
       padding-bottom: 15px;
     }
   }
@@ -22,12 +22,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     margin-top: 30px;
     padding: 0 100px;
 
-    @include mobile{
-      margin-top: 10px;
+    @include tablet{
+      flex-wrap: wrap;
+      margin: 10px 50px 0 50px;
       padding: 0;
     }
   }
@@ -38,10 +38,11 @@
     text-align: center;
     border-radius: $border-radius-pricing-list;
 
-    @include mobile{
-      max-width: 100%;
+    @include tablet{
+      max-width: 45%;
+      width: 100%;
       display: flex;
-      justify-content: space-around;
+     justify-content: center;
       align-items: center;
       flex-wrap: wrap;
 
@@ -53,8 +54,9 @@
     margin-bottom: 50px;
     text-align: center;
 
-    @include mobile{
+    @include tablet{
       margin: 0;
+      width: 50%;
     }
   }
 
@@ -79,10 +81,11 @@
     font-weight: $weight-headline;
     padding-bottom: 15px;
 
-    @include mobile{
+    @include tablet{
       padding: 0;
-      margin: 25px 0;
+      margin-top: 25px;
       text-align: left;
+      width: 50%;
     }
   }
 
@@ -107,9 +110,8 @@
       bottom: -10px;
       cursor: pointer;
 
-      @include mobile{
-        display: inline-block;
-        left: 0;
+      @include tablet{
+        bottom: -20px;
       }
     }
   }
@@ -131,8 +133,8 @@
     min-width: 320px;
     margin: 0 40px;
 
-    @include mobile{
-      max-width: 100%;
+    @include tablet{
+      width: 60%;
     }
 
     .pricing__numbers {
@@ -148,7 +150,7 @@
     .pricing__element {
       padding-bottom: 15px;
 
-      @include mobile{
+      @include tablet{
         padding: 0;
       }
     }
@@ -157,9 +159,9 @@
       box-shadow: 5px 10px 27px $color-shadow;
     }
 
-    //@include button(list.nth($accent_color,2));
+    @include button(list.nth($accent_color,2));
 
-    @include mobile{
+    @include tablet{
       margin: 50px 0;
       max-width: 100%;
     }
@@ -172,7 +174,7 @@
       @include font(list.nth($accent_color, 3));
     }
 
-    //@include button(list.nth($accent_color,3));
+    @include button(list.nth($accent_color,3));
   }
 
   .pricing__element {

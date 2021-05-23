@@ -52,11 +52,15 @@
   }
 
   .banner__background {
-    background-image: url("/assets/Background.png");
-    height: 400px;
+    height: auto;
     width: 100%;
     background-size: cover;
     background-position: center;
+
+    @include mobile{
+      height: auto;
+      max-width: 100%;
+    }
 
   }
 

@@ -4,7 +4,7 @@
   background: $color-middle-background;
   padding: 100px 0;
 
-  @include mobile{
+  @include tablet{
     padding: 50px 0;
   }
 }
@@ -12,7 +12,7 @@
   .benefits_container {
     padding: 0 100px;
 
-    @include mobile{
+    @include tablet{
       padding: 0;
       margin: 0 30px;
     }
@@ -27,7 +27,7 @@
     border-radius: $border-radius-section3;
     margin-bottom: 40px;
 
-    @include mobile {
+    @include tablet {
       flex-direction: column-reverse;
       align-items: center;
     }
@@ -41,7 +41,7 @@
       text-align: left;
     }
 
-    @include mobile{
+    @include tablet{
       max-width: 100%;
       margin: 0 auto;
 
@@ -57,7 +57,7 @@
     margin-top: 30px;
     line-height: 1.375rem;
 
-    @include mobile{
+    @include tablet{
       margin-top: 15px;
       padding: 0;
     }
@@ -80,7 +80,7 @@
       display: block;
       margin-top: 50px;
 
-      @include mobile{
+      @include tablet{
         display: none;
       }
     }
@@ -89,7 +89,7 @@
   .article_mac {
     @include accent(list.nth($accent_color,1));
 
-    @include mobile {
+    @include tablet {
       margin: 20px 25px;
     }
   }
@@ -98,7 +98,7 @@
     @include accent(list.nth($accent_color,2));
     margin: 70px 0;
 
-    @include mobile {
+    @include tablet {
       margin: 20px 25px;
     }
   }
@@ -108,7 +108,7 @@
     max-width: none;
     margin: 70px 35px;
 
-    @include mobile{
+    @include tablet{
       margin: 20px 25px;
     }
   }
@@ -116,8 +116,7 @@
   .benefits__section1 {
 
     .benefits__photo {
-      margin-right: 120px;
-      margin-bottom: 40px;
+      margin: 40px 0;
 
       &::before {
         content: "";
@@ -128,18 +127,20 @@
         border-radius: 41px;
         display: block;
         position: absolute;
-        right: 0;
+        left: 80px;
         top: -40px;
       }
 
-      @include mobile{
-        margin: 40px;
+      @include tablet{
+        text-align: center;
+        margin-top: 15%;
 
         &::before{
-          width: 120px;
-          height: 120px;
+          width: 30%;
+          height: 100%;
           border-radius: 40%;
-          top: -20px;
+          left: 50%;
+          top: -25%;
         }
       }
     }
@@ -148,9 +149,11 @@
   .img-Mac {
     max-width: 360px;
     height: auto;
+    transform: translateX(-100px);
 
-    @include mobile{
-      max-width: 100%;
+    @include tablet{
+      max-width: 50%;
+      transform: none;
     }
   }
 
@@ -170,19 +173,19 @@
       top: -20px;
     }
 
-    @include mobile{
+    @include tablet{
       flex-direction: column-reverse;
       padding: 0;
 
       .benefits__photo {
         margin-top: 30px;
+        text-align: center;
       }
 
       .benefits__photo::before{
-        width: 150px;
-        height: 150px;
-        top: -10px;
-        left: 40px;
+        width: 40%;
+        height: 100%;
+        left: 20%;
       }
     }
   }
@@ -191,16 +194,16 @@
   max-width: 420px;
   height: auto;
 
-  @include mobile{
-    max-width: 100%;
-    padding: 0 40px;
+  @include tablet{
+    max-width: 50%;
+    //padding: 0 40px;
   }
 }
 
 .benefits__section3 {
   display: flex;
 
-  @include mobile{
+  @include tablet{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,7 +213,7 @@
   .benefits__trumpet {
     max-width: 620px;
 
-    @include mobile{
+    @include tablet{
       max-width: 100%;
       margin: 0 auto;
     }
@@ -226,9 +229,9 @@
     border-radius: $border-radius-section3;
     margin-left: 60px;
 
-    @include mobile{
-      flex-grow: 0;
-      margin: 0 auto;
+    @include tablet{
+      margin: 0;
+      width: 100%;
     }
   }
 
@@ -237,9 +240,10 @@
     height: auto;
     margin-top: 55px;
 
-    @include mobile{
-      max-width: 100%;
+    @include tablet{
+      max-width: 70%;
       margin-right: 50px;
+
     }
   }
 
