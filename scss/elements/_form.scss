@@ -44,7 +44,7 @@
         width: 0;
       }
 
-      input:checked ~ .checkbox {
+      input:checked + .checkbox {
         background-image: url("/assets/Checkmark.svg");
         background-size: 50%;
         background-position: center;
