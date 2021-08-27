@@ -1,2 +1,6 @@
 # Best-shop
-Page of one-page type.
+Responsive type of one-page with price calculator.
+
+Using JS ES6.
+
+
